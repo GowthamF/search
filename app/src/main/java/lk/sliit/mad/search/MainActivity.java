@@ -17,16 +17,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fromtxt=(EditText) findViewById(R.id.direction_header_from_text);
-        totxt=(EditText)findViewById(R.id.direction_header_to_text);
+       // fromtxt=(EditText) findViewById(R.id.direction_header_from_text);
+
 
 
     }
 
     public void search(View view)
     {
+        totxt=(EditText)findViewById(R.id.direction_header_to_text);
         Intent intent=new Intent(this,PathActivity.class);
-        intent.putExtra("from",fromtxt.getText().toString());
+       // intent.putExtra("from",fromtxt.getText().toString());
+
         intent.putExtra("to",totxt.getText().toString());
         startActivity(intent);
 

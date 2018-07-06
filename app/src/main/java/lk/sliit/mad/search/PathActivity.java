@@ -10,14 +10,16 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Shader;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class PathActivity extends AppCompatActivity {
 
     ImageView drawingImageView;
-
+    TextView error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,8 @@ public class PathActivity extends AppCompatActivity {
         setContentView(R.layout.activity_path);
 
 
-        audit();
 
+        audit();
 
         //lifttolibrary();
         //lifttomscroom();
@@ -43,17 +45,20 @@ public class PathActivity extends AppCompatActivity {
 
     public void audit()
     {
-        String to="Auditorium";
-       // String from="";
+
+        String to;
         Intent intent=getIntent();
 
-      //  to=intent.getStringExtra("to");
+      to=intent.getStringExtra("to");
        // from=intent.getStringExtra("from");
-
-        if(to.equals("Auditorium"))
+        if(to!=null)
         {
-            lifttoauditorium();
+            if(to.equals("A"))
+            {
+                lifttoauditorium();
+            }
         }
+
     }
 
 
