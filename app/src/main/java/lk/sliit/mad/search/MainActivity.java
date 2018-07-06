@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         intent.putExtra("to",totxt.getText().toString());
         startActivity(intent);
+        finish();
 
 
     }

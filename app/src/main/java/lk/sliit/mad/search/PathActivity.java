@@ -27,7 +27,6 @@ public class PathActivity extends AppCompatActivity {
         setContentView(R.layout.activity_path);
 
 
-
         audit();
 
         //lifttolibrary();
@@ -55,12 +54,13 @@ public class PathActivity extends AppCompatActivity {
         {
             if(to.equals("A"))
             {
-                lifttoauditorium();
+               lifttoauditorium();
+
             }
         }
 
-    }
 
+    }
 
     public void lifttoauditorium()
     {
@@ -87,6 +87,7 @@ public class PathActivity extends AppCompatActivity {
         p.lineTo(300,820);
         canvas.drawPath(p, paint);
     }
+
 
     public void lifttolibrary()
     {
