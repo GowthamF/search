@@ -54,11 +54,9 @@ public class PathActivity extends AppCompatActivity {
         {
             if(to.equals("A"))
             {
-               lifttoauditorium();
-
+                lifttoauditorium();
             }
         }
-
 
     }
 
