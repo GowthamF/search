@@ -45,17 +45,62 @@ public class PathActivity extends AppCompatActivity {
     public void audit()
     {
 
-        String to;
+        String to,from;
         Intent intent=getIntent();
 
       to=intent.getStringExtra("to");
+      from=intent.getStringExtra("from");
        // from=intent.getStringExtra("from");
         if(to!=null)
         {
-            if(to.equals("A"))
+            if(from.equals("Lift Lobby"))
             {
-                lifttoauditorium();
+                if(to.equals("Auditorium"))
+                {
+                    lifttoauditorium();
+                }
+                else
+                    if(to.equals("MSC Room"))
+                    {
+                        lifttomscroom();
+                    }
+                    else
+                        if(to.equals("Lecture Hall 1"))
+                        {
+                            lifttohallone();
+                        }
+                        else
+                            if(to.equals("Multimedia Lab"))
+                            {
+                                lifttomultimedia();
+                            }
+                            else
+                                if(to.equals("Library"))
+                                {
+                                    lifttolibrary();
+                                }
+                                else
+                                    if(to.equals("Staff Room"))
+                                    {
+                                        lifttoStaffroom();
+                                    }
+                                    else
+                                        if(to.equals("Wash Rooms"))
+                                        {
+                                            lifttoWashroom();
+                                        }
+                                        else
+                                            if(to.equals("Common Room"))
+                                            {
+                                                lifttocommomroom();
+                                            }
+                                            else
+                                                if(to.equals("DCCN Lab"))
+                                                {
+                                                    lifttodccnlab();
+                                                }
             }
+
         }
 
     }
