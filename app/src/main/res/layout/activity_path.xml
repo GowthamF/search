@@ -7,9 +7,16 @@
     tools:context=".MainActivity">
 
 
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="386dp"
+        android:layout_height="511dp"
+        app:srcCompat="@drawable/fffff"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+    </ImageView>
 
     <ImageView
         android:id="@+id/DrawingImageView"
@@ -23,17 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="386dp"
-        android:layout_height="511dp"
-        app:srcCompat="@drawable/floorpl"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-
-    </ImageView>
 
     <Button
         android:id="@+id/button"
