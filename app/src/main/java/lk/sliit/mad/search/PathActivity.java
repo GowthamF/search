@@ -20,6 +20,7 @@ public class PathActivity extends AppCompatActivity {
 
     ImageView drawingImageView;
     TextView error;
+    Paths paths=new Paths();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,28 +108,19 @@ public class PathActivity extends AppCompatActivity {
 
     public void lifttoauditorium()
     {
+
+        paths.libtoaudit(imagepaths());
+        // Path
+    }
+    public Canvas imagepaths()
+    {
         drawingImageView = (ImageView) this.findViewById(R.id.DrawingImageView);
         Bitmap bitmap = Bitmap.createBitmap((int) getWindowManager()
                 .getDefaultDisplay().getWidth(), (int) getWindowManager()
                 .getDefaultDisplay().getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         drawingImageView.setImageBitmap(bitmap);
-
-        // Path
-
-        Paint paint = new Paint();
-        paint.setStyle(Paint.Style.STROKE);
-        // paint.setColor(Color.BLACK);
-        paint.setShader(new LinearGradient(0, 0, 5,5, Color.BLUE, Color.WHITE, Shader.TileMode.REPEAT));
-        paint.setStrokeWidth(5);
-        Path p = new Path();
-        p.moveTo(220,270);
-        p.lineTo(220,730);
-        p.moveTo(220,730);
-        p.lineTo(300,730);
-        p.moveTo(300,730);
-        p.lineTo(300,820);
-        canvas.drawPath(p, paint);
+        return canvas;
     }
 
 
