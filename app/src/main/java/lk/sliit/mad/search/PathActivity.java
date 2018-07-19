@@ -70,12 +70,14 @@ public class PathActivity extends AppCompatActivity {
         con8=findViewById(R.id.con8);
         con9=findViewById(R.id.con9);
         con10=findViewById(R.id.con10);
+        drawingImageView = (ImageView) this.findViewById(R.id.DrawingImageView);
         Intent intent = getIntent();
         to = intent.getStringExtra("to");
         from = intent.getStringExtra("from");
 
 
         audit();
+        auditoriumpath();
 
         //imagepaths();
 
@@ -85,7 +87,18 @@ public class PathActivity extends AppCompatActivity {
 
     }
     public void cli(View view) {
-        multimediapath();
+        if(from!=null)
+        {
+            if(from.equals("Auditorium"))
+            {
+                auditoriumpath();
+            }
+            else
+                if(from.equals("Multimedia Lab"))
+                {
+                    multimediapath();
+                }
+        }
     }
 
 
@@ -93,13 +106,7 @@ public class PathActivity extends AppCompatActivity {
     public void audit()
         {
 
-            if(from!=null)
-            {
-                if(from.equals("Auditorium"))
-                {
-                    auditoriumpath();
-                }
-            }
+
 
 
         }
@@ -130,7 +137,7 @@ public class PathActivity extends AppCompatActivity {
                     screenwidth = displayMetrics.widthPixels;
                     screenheight = displayMetrics.heightPixels;
 
-                    drawingImageView = (ImageView) this.findViewById(R.id.DrawingImageView);
+
                     Bitmap bitmap;
                     bitmap = Bitmap.createBitmap(screenwidth, screenheight, Bitmap.Config.ARGB_8888);
                     Canvas canvas = new Canvas(bitmap);
