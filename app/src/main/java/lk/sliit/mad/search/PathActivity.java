@@ -76,8 +76,8 @@ public class PathActivity extends AppCompatActivity {
         from = intent.getStringExtra("from");
 
 
-        audit();
-        auditoriumpath();
+      //  audit();
+        //auditoriumpath();
 
         //imagepaths();
 
@@ -147,7 +147,7 @@ public class PathActivity extends AppCompatActivity {
 
                     paint.setShader(new LinearGradient(0, 0, 5,5, Color.BLUE, Color.WHITE, Shader.TileMode.REPEAT));
                     paint.setStrokeWidth(5);
-                    canvas.drawLine(x,y-50,x1,y1-50,paint);
+                    canvas.drawLine(41*5-10,49*11,x1,y1-50,paint);
                     canvas.drawLine(x1,y1-50,x2,y2-50,paint);
 
                 }
