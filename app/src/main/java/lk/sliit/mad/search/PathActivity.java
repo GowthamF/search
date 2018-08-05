@@ -147,7 +147,9 @@ public class PathActivity extends AppCompatActivity {
 
                     paint.setShader(new LinearGradient(0, 0, 5,5, Color.BLUE, Color.WHITE, Shader.TileMode.REPEAT));
                     paint.setStrokeWidth(5);
-                    canvas.drawLine(41*5-10,49*11,x1,y1-50,paint);
+
+                    //canvas.drawLine(199.98f,472.68f,x1,y1-50,paint);
+                    canvas.drawLine(199.98f,660f,x1,y1-50,paint);
                     canvas.drawLine(x1,y1-50,x2,y2-50,paint);
 
                 }
